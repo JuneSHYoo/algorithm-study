@@ -31,7 +31,6 @@ class Solution {
         
         Arrays.sort(d[n-1]);
         answer = d[n-1][n-1];
-        
         return answer;
     }
 }

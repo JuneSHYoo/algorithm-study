@@ -38,27 +38,9 @@ class Solution {
             } 
         }
         
-        
-        int maxGap = maxGapGivenMin(rock, answer);
-        
         return answer;
     }
     
-    private int maxGapGivenMin(List<Integer> rock, int minGap) {
-        int last = rock.get(0);
-        int maxGap = 0;
-        for (int i = 1; i < rock.size(); i++) { // 끝(distance)까지 포함
-            int diff = rock.get(i) - last;
-            if (diff < minGap) {
-                // 제거 (last 유지해서 간격 누적)
-            } else {
-                // 유지 → 구간 하나 확정
-                if (diff > maxGap) maxGap = diff;
-                last = rock.get(i);
-            }
-        }
-        return maxGap;
-    }
     
     
 }
